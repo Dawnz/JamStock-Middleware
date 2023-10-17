@@ -1,5 +1,6 @@
 package com.daas.jamstock_middlware.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -15,7 +16,7 @@ public class Stock {
     private Double closePrice;
     private Double lastTradePrice;
     private Double priceChange;
-//    @ManyToOne
-//    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-//    private StockMarket market;
+    @ManyToOne
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    private Market market;
 }

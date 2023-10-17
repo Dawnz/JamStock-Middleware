@@ -12,8 +12,8 @@ public class Article {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Date datePublished;
-//    @ManyToOne
-//    private Stock relatedStock;
+    @ManyToOne
+    private Stock stock;
 //    TODO. update this for file upload
     private String document;
 

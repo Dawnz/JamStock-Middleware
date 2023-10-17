@@ -11,6 +11,6 @@ public class StockMarket {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-//    @OneToMany
-//    private List<Stock> stocks;
+    @OneToOne
+    private Market marketType;
 }
