@@ -45,6 +45,7 @@ type AuthPayload{
     token:String
     user:User
 }
+
 ##inputs
 #input createStockMarket{
 #    id: ID!
@@ -193,125 +194,138 @@ type AuthPayload{
 ############Get StockMarket by ID:
 ##
 ##
-##type Query {
-##stockMarket(id: ID!) {
-##id
-##marketType {
-##id
-##}
-##}
-##}
-############List all StockMarkets:
-##
-##
-##query {
-##stockMarkets {
-##id
-##marketType {
-##id
-##}
-##}
-##}
-############Get Market by ID:
-##
-##
-##query {
-##market(id: ID!) {
-##id
-##stocks {
-##symbol
-##}
-##}
-##}
-############List all Markets:
-##
-##
-##query {
-##markets {
-##id
-##}
-##}
-############Get Currency by ID:
-##
-##
-##query {
-##currency(id: ID!) {
-##id
-##name
-##}
-##}
-############List all Currencies:
-##
-##
-##query {
-##currencies {
-##id
-##name
-##}
-##}
-############Get Stock by Symbol:
-##
-##
-##query {
-##stock(symbol: String!) {
-##symbol
-##name
-##closePrice
-##lastTradePrice
-##priceChange
-##}
-##}
-############List all Stocks in a Market:
-##
-##
-##query {
-##market(id: ID!) {
-##id
-##stocks {
-##symbol
-##name
-##}
-##}
-##}
-############Get Article by Date Published:
-##
-##query {
-##article(datePublished: Date!) {
-##datePublished
-##relatedStock {
-##symbol
-##}
-##document
-##}
-##}
-############List all Articles:
-##
-##query {
-##articles {
-##datePublished
-##relatedStock {
-##symbol
-##}
-##document
-##}
-##}
-############Get User by ID:
-##
-##query {
-##user(id: ID!) {
-##id
-##username
-##email
-##twoFactorEnabled
-##profile {
-##displayName
-##profilePicture
-##}
-##}
-##}
+#type Query {
+#stockMarket(id: ID!) {
+#id
+#marketType {
+#id
+#}
+#}
+#}
+###########List all StockMarkets:
+#
+#
+#query {
+#stockMarkets {
+#id
+#marketType {
+#id
+#}
+#}
+#}
+###########Get Market by ID:
+#
+#
+#query {
+#market(id: ID!) {
+#id
+#stocks {
+#symbol
+#}
+#}
+#}
+###########List all Markets:
+#
+#
+#query {
+#markets {
+#id
+#}
+#}
+###########Get Currency by ID:
+#
+#
+#query {
+#currency(id: ID!) {
+#id
+#name
+#}
+#}
+###########List all Currencies:
+#
+#
+#query {
+#currencies {
+#id
+#name
+#}
+#}
+###########Get Stock by Symbol:
+#
+#
+#query {
+#stock(symbol: String!) {
+#symbol
+#name
+#closePrice
+#lastTradePrice
+#priceChange
+#}
+#}
+###########List all Stocks in a Market:
+#
+#
+#query {
+#market(id: ID!) {
+#id
+#stocks {
+#symbol
+#name
+#}
+#}
+#}
+###########Get Article by Date Published:
+#
+#query {
+#article(datePublished: Date!) {
+#datePublished
+#relatedStock {
+#symbol
+#}
+#document
+#}
+#}
+###########List all Articles:
+#
+#query {
+#articles {
+#datePublished
+#relatedStock {
+#symbol
+#}
+#document
+#}
+#}
+###########Get User by ID:
+#
+#query {
+#user(id: ID!) {
+#id
+#username
+#email
+#twoFactorEnabled
+#profile {
+#displayName
+#profilePicture
+#}
+#}
+#}
+
+#query {
+#stock(symbol: String!) {
+#symbol
+#name
+#closePrice
+#lastTradePrice
+#priceChange
+#}
+#}
 
 type Query {
-    bookById(id: ID): Book
+#    bookById(id: ID): Book
+#    stockById(id: ID):Stock
+#    stocks:[Stock]
+    currencies:[Currency]
 }
 
 type Book {

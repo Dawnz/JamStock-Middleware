@@ -1,4 +1,4 @@
-package com.daas.jamstock_middlware.model;
+package com.daas.jamstock_middlware.models;
 
 import java.util.Arrays;
 import java.util.List;

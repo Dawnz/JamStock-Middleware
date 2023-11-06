@@ -1,7 +1,7 @@
 package com.daas.jamstock_middlware.controllers;
 
-import com.daas.jamstock_middlware.model.Author;
-import com.daas.jamstock_middlware.model.Book;
+import com.daas.jamstock_middlware.models.Author;
+import com.daas.jamstock_middlware.models.Book;
 import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.graphql.data.method.annotation.SchemaMapping;
