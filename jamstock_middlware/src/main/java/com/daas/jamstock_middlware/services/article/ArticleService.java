@@ -1,7 +1,7 @@
 package com.daas.jamstock_middlware.services.article;
 
-import com.daas.jamstock_middlware.models.Currency;
-import com.daas.jamstock_middlware.repositories.CurrencyRepository;
+import com.daas.jamstock_middlware.models.Article;
+import com.daas.jamstock_middlware.repositories.ArticleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,10 +10,10 @@ import java.util.List;
 @Service
 public class ArticleService implements IArticleService {
     @Autowired
-    CurrencyRepository currencyRepository;
+    ArticleRepository articleRepository;
 
     @Override
-    public List<Currency> findAllCurrencies(){
-        return currencyRepository.findAll();
+    public List<Article> findAllArticles(){
+        return articleRepository.findAll();
     }
 }
