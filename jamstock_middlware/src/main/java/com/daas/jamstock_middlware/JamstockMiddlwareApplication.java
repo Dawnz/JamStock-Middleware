@@ -1,6 +1,5 @@
 package com.daas.jamstock_middlware;
-
-import com.daas.jamstock_middlware.models.Currency;
+import com.daas.jamstock_middlware.repositories.CurrencyRepository;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,11 +12,12 @@ public class JamstockMiddlwareApplication {
 		SpringApplication.run(JamstockMiddlwareApplication.class, args);
 	}
 
-//	@Bean
-//	ApplicationRunner applicationRunner(CurrencyRepository currencyRepository){
-//		return args -> {
-//			Currency currency = currencyRepository.save(new Currency(1,"JMD"));
-//			Currency currency2 = currencyRepository.save(new Currency(2,"USD"));
-//		};
-//	}
+
+	@Bean
+	ApplicationRunner applicationRunner (CurrencyRepository currencyRepository){
+		return args -> {
+			 currencyRepository.save(new Currency(null,"JMD"));
+			 currencyRepository.save(new Currency(null,"USD"));
+		};
+	}
 }
