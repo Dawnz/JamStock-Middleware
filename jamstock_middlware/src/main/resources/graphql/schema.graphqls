@@ -7,6 +7,7 @@ type StockMarket {
 
 type Market {
     id: ID!
+    name:String!
     stocks: [Stock]
 }
 
@@ -326,6 +327,10 @@ type Query {
 #    stockById(id: ID):Stock
 #    stocks:[Stock]
     currencies:[Currency]
+    markets:[Market]
+    stocks:[Stock]
+    stockMarkets:[StockMarket]
+    articles:[Article]
 }
 
 type Book {
