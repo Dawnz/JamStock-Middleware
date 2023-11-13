@@ -20,6 +20,8 @@ public class JamstockMiddlwareApplication {
 		SpringApplication.run(JamstockMiddlwareApplication.class, args);
 	}
 
+	<<<<<<<HEAD
+
 	@Bean
 	ApplicationRunner applicationRunner(CurrencyRepository currencyRepository, MarketRepository marketRepository, StockMarketRepository stockMarketRepository){
 		return args -> {
@@ -31,6 +33,7 @@ public class JamstockMiddlwareApplication {
 //			Market Type
 			StockMarket stockMarket = stockMarketRepository.save(new StockMarket(5,market));
 			StockMarket stockMarket2 = stockMarketRepository.save(new StockMarket(6,market2));
+
 		};
 	}
 }
