@@ -20,19 +20,18 @@ public class JamstockMiddlwareApplication {
 		SpringApplication.run(JamstockMiddlwareApplication.class, args);
 	}
 
-	<<<<<<<HEAD
-
 	@Bean
-	ApplicationRunner applicationRunner(CurrencyRepository currencyRepository, MarketRepository marketRepository, StockMarketRepository stockMarketRepository){
+	ApplicationRunner applicationRunner(CurrencyRepository currencyRepository, MarketRepository marketRepository,
+			StockMarketRepository stockMarketRepository) {
 		return args -> {
-			Currency currency = currencyRepository.save(new Currency(1,"JMD"));
-			Currency currency2 = currencyRepository.save(new Currency(2,"USD"));
-//			markets
-			Market market = marketRepository.save(new Market(3,"Junior Market",new ArrayList<>()));
-			Market market2 = marketRepository.save(new Market(4,"Main Market",new ArrayList<>()));
-//			Market Type
-			StockMarket stockMarket = stockMarketRepository.save(new StockMarket(5,market));
-			StockMarket stockMarket2 = stockMarketRepository.save(new StockMarket(6,market2));
+			Currency currency = currencyRepository.save(new Currency(1, "JMD"));
+			Currency currency2 = currencyRepository.save(new Currency(2, "USD"));
+			// markets
+			Market market = marketRepository.save(new Market(3, "Junior Market", new ArrayList<>()));
+			Market market2 = marketRepository.save(new Market(4, "Main Market", new ArrayList<>()));
+			// Market Type
+			StockMarket stockMarket = stockMarketRepository.save(new StockMarket(5, market));
+			StockMarket stockMarket2 = stockMarketRepository.save(new StockMarket(6, market2));
 
 		};
 	}
